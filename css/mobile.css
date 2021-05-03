@@ -1,0 +1,6 @@
+@media (max-width: 950px) {
+  /* Job View Page */
+  .job-details {
+    flex-direction: column;
+  }
+}

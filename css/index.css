@@ -1,0 +1,822 @@
+/* ####### Habot CSS Library ####### */
+/* #### Habot 2021 All Right Reserved #### */
+
+/* ## General Rules ## */
+:root {
+  --primary-color: #3b5998;
+  --default-color: #ffa500;
+  --dark-color: #333;
+  --light-color: #ffffff;
+  --smoke-color: #f5f5f5;
+  --dim-color: #929292;
+  --muted-color: #adadad;
+  --danger-color: #dc3545;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Roboto", "Raleway", sans-serif;
+  font-size: 1rem;
+  line-height: 1.6;
+  background-color: var(--smoke-color);
+  color: var(--dark-color);
+}
+
+a {
+  color: var(--primary-color);
+  text-decoration: none;
+}
+
+ul {
+  list-style: none;
+}
+
+img {
+  width: 100%;
+}
+
+textarea {
+  resize: none;
+}
+
+/* Text Styles*/
+.x-large {
+  font-size: 4rem;
+  line-height: 1.2;
+  margin-bottom: 1rem;
+}
+
+.large {
+  font-size: 3rem;
+  line-height: 1.2;
+  margin-bottom: 1rem;
+}
+
+.lead {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  font-weight: bold;
+}
+
+.text-center {
+  text-align: center;
+}
+.text-right {
+  text-align: right;
+}
+.text-left {
+  text-align: left;
+}
+
+.text-primary {
+  color: var(--primary-color);
+}
+
+.text-default {
+  color: var(--default-color);
+}
+
+.text-dark {
+  color: var(--dark-color);
+}
+
+.text-bold {
+  font-weight: bold;
+}
+.less-bold {
+  font-weight: 500;
+  line-height: 1.3em;
+}
+
+/* Fonts */
+.fs {
+  font-size: 0.8rem;
+}
+
+.fs-x {
+  font-size: 0.6rem;
+}
+
+.fs-xx {
+  font-size: 0.1rem;
+}
+
+.fs-1x {
+  font-size: 1rem;
+}
+
+.fs-11x {
+  font-size: 1.1rem;
+}
+.fs-12x {
+  font-size: 1.2rem;
+}
+.fs-15x {
+  font-size: 1.5rem;
+}
+
+.fs-2x {
+  font-size: 2rem;
+}
+
+.fs-1xl {
+  font-size: 1.5rem;
+}
+
+.fs-3x {
+  font-size: 3rem;
+}
+
+/* Display */
+.d-none {
+  display: none;
+}
+
+.d-block {
+  display: block;
+}
+
+.d-inline {
+  display: inline;
+}
+
+.d-inline-block {
+  display: inline-block;
+}
+
+.d-flex {
+  display: flex;
+}
+
+.flex-center {
+  align-items: center;
+}
+
+.flex-column {
+  flex-direction: column;
+}
+
+.flex-start {
+  justify-content: flex-start;
+}
+
+.flex-start {
+  justify-content: flex-end;
+}
+
+.space-between {
+  justify-content: space-between;
+}
+
+/* Positions */
+.position-relative {
+  position: relative;
+}
+
+.position-absolute {
+  position: absolute;
+}
+
+.position-fixed {
+  position: fixed;
+}
+
+.position-sticky {
+  position: sticky;
+}
+
+/* floats */
+.pull-left {
+  float: left;
+}
+
+.pull-right {
+  float: right;
+}
+
+.clear {
+  clear: both;
+}
+
+/* Colors */
+.primart-color {
+  color: var(--primary-color);
+}
+
+.default-color {
+  color: var(--default-color);
+}
+
+.dark-color {
+  color: var(--dark-color);
+}
+
+.light-color {
+  color: var(--light-color);
+}
+
+.smoke-color {
+  color: var(--smoke-color);
+}
+
+.dim-color {
+  color: var(--dim-color);
+}
+
+.muted-color {
+  color: var(--muted-color);
+}
+
+.danger-color {
+  color: var(--danger-color);
+}
+
+/* Padding */
+.p {
+  padding: 0.5rem;
+}
+
+/* Margin */
+.mx-1 {
+  margin: 1rem 0 0 0;
+}
+
+.mx-2 {
+  margin: 2rem 0 0 0;
+}
+
+.mx-3 {
+  margin: 3rem 0 0 0;
+}
+.mx-5 {
+  margin: 5rem 0 0 0;
+}
+
+.my-x {
+  margin: 0 0 0.5rem 0;
+}
+.my-1 {
+  margin: 0 0 1rem 0;
+}
+.my-2 {
+  margin: 0 0 2rem 0;
+}
+
+.myx-1 {
+  margin: 0 0 0 1rem;
+}
+
+.mxy-x {
+  margin: 0 0.5rem 0 0;
+}
+.mxy-1 {
+  margin: 0 1rem 0 0;
+}
+
+.btn {
+  display: block;
+  padding: 0.6rem 1.3rem;
+  font-size: 0.8rem;
+  cursor: pointer;
+  margin-right: 0.5rem;
+  transition: opacity 0.2s ease-in;
+  outline: none;
+  border: none;
+}
+
+.btn-primary {
+  color: var(--light-color);
+  background-color: var(--primary-color);
+}
+
+.btn-default {
+  color: var(--light-color);
+  background-color: var(--default-color);
+}
+
+.btn-search {
+  top: 0.45rem;
+  right: 0;
+  border-radius: 16px;
+  color: var(--light-color);
+  background-color: var(--default-color);
+}
+
+.btn-view {
+  top: 0.3rem;
+  right: 0;
+  border-radius: 10px;
+  color: var(--light-color);
+  background-color: var(--dim-color);
+}
+
+.btn-upload {
+  top: 0.4rem;
+  right: 0;
+  padding: 0.3rem 1rem;
+  color: var(--light-color);
+  border-radius: 3px;
+  background-color: var(--default-color);
+}
+
+.btn-explore {
+  width: 175px;
+  padding: 1.2rem 0;
+  border-radius: 6px;
+  margin: 3rem 0 0 0;
+  font-size: 1.2rem;
+  font-weight: bolder;
+}
+
+.btn-submit {
+  margin: 2rem 0 0 0;
+  border-radius: 4px;
+  padding: 0.7rem 2rem;
+  font-weight: bold;
+}
+
+/* Forms */
+form {
+  height: 1005px;
+}
+.form .form-group {
+  margin: 2rem 0;
+}
+
+div .form-group input {
+  width: 50%;
+}
+
+.form .form-text {
+  display: block;
+  margin-top: 0.3rem;
+  color: #888;
+}
+
+.form input[type="text"],
+.form input[type="email"],
+.form input[type="password"],
+.form input[type="date"],
+.form input[type="url"],
+.form input[type="number"],
+.form select,
+.form textarea {
+  display: block;
+  width: 60%;
+  padding: 0.8rem 1rem;
+  font-size: 0.9rem;
+  border: 1px solid var(--smoke-color);
+  border-radius: 6px;
+  outline: none;
+}
+
+/* Main App Styles */
+#main {
+  position: relative;
+  margin-bottom: 4rem;
+}
+
+.container {
+  max-width: 1100px;
+  margin: auto;
+  overflow: hidden;
+  padding: 0 2rem;
+  margin-top: 2rem;
+}
+
+/* Navbar */
+.navbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  padding: 1rem 3rem 0.5rem 3rem;
+  margin: 0;
+  background-color: var(--light-color);
+  opacity: 1;
+  z-index: 1;
+}
+
+.navbar ul {
+  display: flex;
+  color: var(--primary-color);
+}
+
+.navbar a {
+  color: inherit;
+  padding: 0.45rem;
+  margin: 0 0.25rem;
+}
+.navbar a:first-child {
+  margin-right: 0.8rem;
+}
+
+.navbar a:hover {
+  color: inherit;
+}
+
+.active-link {
+  font-weight: bold;
+}
+
+.active-circle {
+  position: absolute;
+  width: 5px;
+  height: 5px;
+  top: 0.95rem;
+  right: 3.9rem;
+  border-radius: 100%;
+  background-color: var(--primary-color);
+}
+
+.active-circle-index {
+  position: absolute;
+  width: 5px;
+  height: 5px;
+  top: 0.95rem;
+  right: 15.7rem;
+  border-radius: 100%;
+  background-color: var(--primary-color);
+}
+
+/* Logo */
+.logo {
+  width: 100px;
+  height: 45px;
+  margin: 0;
+}
+
+.logo img {
+  width: 100%;
+  height: inherit;
+  object-fit: contain;
+}
+
+/* Header Intro */
+.introduction-header {
+  margin: 0;
+  background: url(../assets/local/illustrations/Rectangle-3.svg);
+  padding: 0 7rem;
+  height: 789px;
+}
+.illustration-group-1 {
+  margin: 0 6rem 0 0;
+  flex: 4.5;
+}
+.introduction {
+  flex: 3.3;
+}
+.introduction a {
+  width: 50px;
+}
+
+.watch-p {
+  width: 175px;
+  margin: 0.5rem 0 2.5rem 0.3rem;
+  font-weight: bold;
+  font-size: 1.3rem;
+  line-height: 1.2em;
+}
+
+.read-more-link {
+  justify-content: unset;
+  width: 425px;
+}
+.read-more-policy {
+  justify-content: unset;
+  width: 205px;
+  margin: 0 0 0 25rem;
+}
+.learn-more-story {
+  justify-content: unset;
+  width: 205px;
+  margin: 0 0 0 20rem;
+}
+.discover-more-values {
+  justify-content: unset;
+  width: 290px;
+  margin: 0 0 0 18rem;
+}
+
+.read-more-link a,
+.read-more-policy a,
+.learn-more-story a,
+.discover-more-values a {
+  text-decoration: underline;
+  flex: 3.8;
+}
+
+.read-more-link img,
+.read-more-policy img,
+.learn-more-story img,
+.discover-more-values img {
+  flex: 0.2;
+}
+
+/* Main Sections:: Job Platform */
+.illustration-group-4 {
+  width: 1000px;
+  height: 500px;
+  margin: 0 4rem 0 0;
+}
+.our-values-section {
+  width: 575px;
+}
+
+.our-story-section {
+  width: 500px;
+  margin: 0 6rem 0 0;
+}
+.illustration-group-2,
+.illustration-group-3 {
+  width: 1000px;
+  height: 500px;
+}
+.illustration-group-2 img,
+.illustration-group-3 img,
+.illustration-group-4 img {
+  width: 100%;
+  height: inherit;
+  object-fit: contain;
+}
+
+/* Custom Select */
+/* The container must be positioned relative: */
+.custom-select {
+  position: relative;
+}
+
+.custom-select select {
+  display: none; /*hide original SELECT element: */
+}
+
+.select-selected {
+  background-color: var(--light-color);
+}
+
+/* Style the arrow inside the select element: */
+.select-selected:after {
+  position: absolute;
+  content: "";
+  top: 18px;
+  right: 10px;
+  width: 0;
+  height: 0;
+  border: 6px solid transparent;
+  border-color: var(--dark-color) transparent transparent transparent;
+}
+
+/* Point the arrow upwards when the select box is open (active): */
+.select-selected.select-arrow-active:after {
+  border-color: transparent transparent #fff transparent;
+  top: 7px;
+}
+
+/* style the items (options), including the selected item: */
+.select-items div,
+.select-selected {
+  color: var(--dark-color);
+  padding: 8px 16px;
+  border: 1px solid transparent;
+  border-color: transparent transparent rgba(0, 0, 0, 0.1) transparent;
+  cursor: pointer;
+}
+
+/* Style items (options): */
+.select-items {
+  position: absolute;
+  background-color: var(--light-color);
+  top: 100%;
+  left: 0;
+  right: 0;
+  z-index: 99;
+}
+
+/* Hide the items when the select box is closed: */
+.select-hide {
+  display: none;
+}
+
+.select-items div:hover,
+.same-as-selected {
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
+/* #### Home Page Rules #### */
+/* Middle Header */
+.middle-header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100px;
+}
+
+div .search {
+  width: 750px;
+}
+
+.form input[type="search"] {
+  display: block;
+  width: 100%;
+  padding: 1rem;
+  font-size: 0.9rem;
+  border-radius: 30px;
+  border: 1px solid var(--smoke-color);
+  outline: none;
+}
+
+/* Job Listing */
+div .job {
+  margin-bottom: 1.5rem;
+  padding: 0.8rem;
+  width: 100%;
+  font-size: 0.8rem;
+  color: var(--dim-color);
+  border-radius: 10px;
+  background-color: var(--light-color);
+}
+
+/* #### MTO & MAL Page Rules #### */
+/* Header Rules */
+.active-circle-mal {
+  position: absolute;
+  width: 5px;
+  height: 5px;
+  top: 0.95rem;
+  right: 6rem;
+  border-radius: 100%;
+  background-color: var(--primary-color);
+}
+
+.active-circle-mto {
+  position: absolute;
+  width: 5px;
+  height: 5px;
+  top: 0.95rem;
+  right: 2.9rem;
+  border-radius: 100%;
+  background-color: var(--primary-color);
+}
+
+.page-title {
+  width: 100%;
+  flex-direction: column;
+  align-items: flex-end;
+  color: var(--light-color);
+  margin: 4rem 0 0 0;
+  font-weight: bold;
+  padding: 1.2rem 3rem;
+  background-color: var(--primary-color);
+}
+
+#tc-type-required {
+  right: 0;
+  top: 3.2rem;
+}
+
+/* Document Upload */
+.upload-area {
+  background-color: var(--light-color);
+  color: var(--muted-color);
+}
+
+.alert-notification {
+  top: 3rem;
+  right: 0;
+}
+
+/* Job View Details */
+.job-details {
+  width: 100%;
+}
+
+.job-view {
+  width: 650px;
+  margin: 0 2rem 0 0;
+}
+
+/* Left Hanside */
+.job-description {
+  background: var(--light-color);
+  padding: 2rem;
+}
+
+/* Right Handise */
+.more-info {
+  width: 425px;
+  height: 385px;
+  margin: 3.75rem 0 0 0;
+  padding: 1rem;
+  background: var(--light-color);
+}
+
+.download-attchement {
+  margin: 1rem 0 0 0;
+}
+.download-attchement a {
+  padding: 0.8rem 0.6rem;
+  font-weight: bold;
+  border: 3px solid var(--default-color);
+  border-radius: 3px;
+  font-size: 0.7rem;
+  cursor: pointer;
+}
+.info-numbers {
+  margin: 3rem 0 0 0;
+}
+.info-numbers p {
+  margin: 0 0 1rem 0;
+}
+
+.skills {
+  width: 425px;
+  margin: 1.5rem 0 0 0;
+  padding: 1rem;
+  background: var(--light-color);
+}
+
+.btn-apply {
+  width: 100%;
+  padding: 1rem 0;
+  margin: 1.5rem 0 0 0;
+  border-radius: 4px;
+  font-size: 1.2rem;
+  background: var(--default-color);
+}
+
+/* Footer */
+.footer {
+  width: 100%;
+  margin: 5rem 0 0 0;
+  font-size: 0.8em;
+  color: var(--dim-color);
+}
+
+.footer-wrapper {
+  display: flex;
+  justify-content: space-between;
+  padding: 2rem 0 0 0;
+}
+
+.footer-main {
+  margin: 0;
+  background: url(../assets/local/illustrations/Rectangle-10.svg);
+  padding: 0 7rem;
+  height: 275px;
+  border: 1px solid var(--smoke-color);
+}
+
+.policies,
+.about,
+.address {
+  flex: 1;
+}
+
+.subscribe {
+  flex: 1;
+  margin: 0 0 0 2rem;
+}
+.subscribe .input {
+  height: 35px;
+}
+.subscribe .input img {
+  height: 35px;
+  margin: 0 0 0 -5rem;
+}
+.subscribe .input input {
+  padding: 0.8rem 1rem;
+  font-size: 0.9rem;
+  border: 1px solid var(--smoke-color);
+  border-radius: 6px;
+  outline: none;
+  width: 175px;
+  background: var(--smoke-color);
+}
+
+/* Pagination */
+.pages {
+  width: 250px;
+  font-size: 0.8rem;
+  color: var(--dim-color);
+}
+
+.page-number {
+  padding: 0.3rem 0.7rem;
+  border-radius: 100%;
+  background-color: var(--light-color);
+  cursor: pointer;
+}
+
+.page-number:hover {
+  color: var(--light-color);
+  background-color: var(--default-color);
+}
+
+.page-active {
+  color: var(--light-color);
+  background-color: var(--default-color);
+}

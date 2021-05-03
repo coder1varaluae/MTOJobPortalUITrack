@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" href="%PUBLIC_URL%/habot.ico" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#3B5998" />
+    <meta name="description" content="Habot App" />
+    <script src="https://kit.fontawesome.com/698a14e25d.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="./css/index.css" />
+    <link rel="stylesheet" href="./css/mobile.css" />
+    <title>Habot.io | Job Platform</title>
+  </head>
+  <body>
+    <noscript>You need to enable JavaScript to run this app.</noscript>
+    <div id="main">
+      <!-- Top Menu -->
+      <header class="main-header fs">
+        <nav class="navbar d-flex flex-justify space-between">
+          <div class="logo">
+            <a href="./index.html">
+              <img src="./assets/local/icons/logo-x.png" alt="logo"/>
+            </a>
+          </div>
+          <ul class="position-relative">
+            <a href="./index.html"><li class="home">Home</li></a>
+            <a href="#about.html"><li class="about">About</li></a>
+            <a href="#contact.html"><li class="contact">Contact</li></a>
+            <a href="./jobs.html">
+              <li class="career active-link">
+                Careers
+              </li>
+            </a>
+            <div class="active-circle" />
+          </ul>
+        </nav>
+      </header>
+
+      <div class="container">
+        <!-- Middle Header & Search Bar -->
+        <header class="middle-header">
+          <div class="lead">Join our team our team of dedicated professionnals</div>
+
+          <div class="search">
+            <form class="form position-relative" action="">
+              <input
+                type="search"
+                placeholder="Search your dream job with us"
+              />
+              <button class="btn btn-search position-absolute" type="submit">
+                Find this job now
+              </button>
+            </form>
+          </div>
+        </header>
+
+        <!-- Section Listing Jobs -->
+        <section class="mx-3">
+          <div class="fs text-bold my-1">Listing 05 Jobs</div>
+
+          <div class="job-listing">
+            <div class="job position-relative" data-id="job-1">
+              <p class="job-title">Video Creation</p>
+              <button class="btn btn-view position-absolute">View Job</button>
+            </div>
+
+            <div class="job position-relative" data-id="job-2">
+              <p class="job-title">Photo Editing</p>
+              <button class="btn btn-view position-absolute">View Job</button>
+            </div>
+
+            <div class="job position-relative" data-id="job-3">
+              <p class="job-title">Data Entry Operator</p>
+              <button class="btn btn-view position-absolute">View Job</button>
+            </div>
+
+            <div class="job position-relative" data-id="job-4">
+              <p class="job-title">Content Writing</p>
+              <button class="btn btn-view position-absolute">View Job</button>
+            </div>
+
+            <div class="job position-relative" data-id="job-5">
+              <p class="job-title">Document Naming</p>
+              <button class="btn btn-view position-absolute">View Job</button>
+            </div>
+          </div>
+        </section>
+
+        <!-- Pagination -->
+        <div class="pages d-flex flex-justify space-between pull-right">
+          <div class="page-number">1</div>
+          <div class="page-number page-active">2</div>
+          <div class="page-number">3</div>
+          <div class="page-number">4</div>
+          <div class="page-number">5</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Footer Session -->
+    <div class="footer-main">
+      <footer class="footer">
+        <div class="footer-wrapper">
+          <div class="policies">
+            <h4 class="fs-1x">Policies</h4>
+            <p>Privacy Policy</p>
+            <p>Terms & Conditions</p>
+          </div>
+  
+          <div class="about">
+            <h4 class="fs-1x">About</h4>
+            <p>About Us</p>
+            <p>Contact Us</p>
+            <p>Microtasks</p>
+          </div>
+  
+          <address class="address">
+            <h4 class="fs-1x">Address</h4>
+            <p>
+              608 One Lake Plaza, Cluster T, Al Sarayat Street, Jumeirah Lake Towers Dubai United A rab Emirates
+            </p>
+          </address>
+  
+          <div class="subscribe">
+            <h4 class="fs-1x">Subscribe</h4>
+            <p>Subscribe to our Newsletters</p>
+            <div class="input d-flex flex-justify">
+              <input type="email" placeholder="Enter email address "/>
+              <img src="./assets/local/illustrations/Group 34.svg" />
+            </div>
+          </div>
+        </div>
+  
+        <p class="text-center mx-2 py-2">Habot.io 2021 &copy; All Right Reserved</p>
+      </footer>
+    </div>
+
+    <script type="text/javascript" src="./js/index.js"></script>
+  </body>
+</html>

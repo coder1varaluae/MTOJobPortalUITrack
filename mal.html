@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" href="%PUBLIC_URL%/habot.ico" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#3B5998" />
+    <meta name="description" content="Habot App" />
+    <script src="https://kit.fontawesome.com/698a14e25d.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="./css/index.css" />
+    <title>Habot.io | Job Platform</title>
+  </head>
+  <body>
+    <noscript>You need to enable JavaScript to run this app.</noscript>
+    <div id="main">
+      <!-- Top Menu -->
+      <header class="main-header">
+        <nav class="navbar d-flex flex-center space-between fs">
+          <div class="logo">
+            <a href="./index.html">
+              <img src="./assets/local/icons/logo-x.png" alt="logo"/>
+            </a>
+          </div>
+          <ul class="position-relative">
+            <a href="./jobs.html"><li class="home">Career Page</li></a>
+            <a href="./mal.html">
+              <li class="about active-link">
+                MAL
+              </li>
+            </a>
+            <a href="./mto.html"><li class="mto">MTO</li></a>
+            <div class="active-circle-mal" />
+          </ul>
+        </nav>
+
+        <!-- Page Title -->
+         <div class="page-title d-flex flex-center">
+          <div class="main-title">MAL Rquirement Form</div>
+        </div>
+      </header>
+
+      <!-- MAL Form -->
+      <div class="container">
+        <form id="mal-form" class="form mx-3" onsubmit="validateMALForm()">
+          <!-- Job Identification Number Input -->
+          <div class = "form-group">
+            <label for="job-id" class="d-flex space-between">
+              <span class="text-bold"> MAL Job Indentification Number * </span>
+              <input
+                type = "text"
+                placeholder = "(Alphanumeric)"
+                name = "job-id"
+                id = "job-id"
+                required
+              />
+            </label>
+          </div>
+
+          <!-- Assembly Line ID Input -->
+          <div class = "form-group">
+            <label for="assembly-id" class="d-flex space-between">
+              <span class="text-bold"> Assembly line ID * </span>
+              <input
+                type = "text"
+                placeholder = "(Alphanumeric)"
+                name = "assembly-id"
+                id = "assembly-id"
+                required
+              />
+            </label>
+          </div>
+
+          <!-- Assembly Line Name Input -->
+          <div class = "form-group">
+            <label for="assembly-name" class="d-flex space-between">
+              <span class="text-bold"> Name of the Assembly line * </span>
+              <input
+                type = "text"
+                placeholder = "(Plain Text)"
+                name = "assembly-name"
+                id = "assembly-name"
+                required
+              />
+            </label>
+          </div>
+
+          <!-- Assembly Line Number -->
+          <div class = "form-group">
+            <label for="assembly-number" class="d-flex space-between">
+              <span class="text-bold"> Number of the Assembly line * </span>
+              <input
+                type = "number"
+                placeholder = "1"
+                name = "assembly-number"
+                id = "assembly-number"
+                required
+              />
+            </label>
+          </div>
+
+          
+          <!-- Assembly Line Name Input -->
+          <div class = "form-group">
+            <label for="person-in-charge-name" class="d-flex space-between">
+              <span class="text-bold"> Name of the person in charge of the MAL * </span>
+              <input
+                type = "text"
+                placeholder = "(Plain Text)"
+                name = "person-in-charge-name"
+                id = "person-in-charge-name"
+                required
+              />
+            </label>
+          </div>
+
+          <!-- Output Folder Link -->
+          <div class = "form-group">
+            <label for="output-folder-link" class="d-flex space-between">
+              <span class="text-bold"> Link of the output folder * </span>
+              <input
+                type = "text"
+                placeholder = "(Link)"
+                name = "output-folder-link"
+                id = "output-folder-link"
+                required
+              />
+            </label>
+          </div>
+
+          <!-- Microtask Name -->
+          <div class = "form-group">
+            <label for="microtask-name" class="d-flex space-between">
+              <span class="text-bold"> Name of the Microtask * </span>
+              <input
+                type = "text"
+                placeholder = "(Plain Text)"
+                name = "microtask-name"
+                id = "microtask-name"
+                required
+              />
+            </label>
+          </div>
+
+          <!-- Microtask Category -->
+          <div class = "form-group">
+            <label for="microtask-category" class="d-flex space-between">
+              <span class="text-bold"> Category of the Microtask * </span>
+              <input
+                type = "text"
+                placeholder = "(Plain Text)"
+                name = "microtask-category"
+                id = "microtask-category"
+                required
+              />
+            </label>
+          </div>
+
+          <!-- Target Date -->
+          <div class = "form-group">
+            <label for="target-date" class="d-flex space-between">
+              <span class="text-bold"> Target date * </span>
+              <input
+                type = "date"
+                placeholder = "(DD/MM/YYYY)"
+                name = "microtask-category"
+                id = "microtask-category"
+                required
+              />
+            </label>
+          </div>
+
+          <!-- Total Budget Allocated -->
+          <div class = "form-group">
+            <label for="budget-allocated" class="d-flex space-between">
+              <span class="text-bold"> Total budget allocated for the job($) * </span>
+              <input
+                type = "number"
+                placeholder = "$1"
+                name = "budget-allocated"
+                id = "budget-allocated"
+                required
+              />
+            </label>
+          </div>
+
+          <!-- Job Description  -->
+          <div class = "form-group">
+            <label for="job-description" class="d-flex space-between">
+              <span class="text-bold"> Job Description * </span>
+              <textarea
+                name="job-description"
+                id="job-description"
+                cols="30"
+                rows="10"
+                placeholder="(Fill Job Description)"
+                maxlength="1000"
+                required
+              ></textarea>
+            </label>
+          </div>
+
+          <!-- Job Sample Upload  -->
+          <div class = "form-group position-relative">
+            <label for="upload-job-sample" class="d-flex space-between">
+              <span class="text-bold"> Upload Job Sample * </span>
+              <input
+                type="text"
+                name="upload-area"
+                class="upload-area"
+                id="upload-sample-area"
+                disabled
+              />
+              <p
+                class="alert-notification danger-color position-absolute fs d-none"
+                id="sample-notification"
+              >
+                Please upload either .jpg, .png, .jpeg or .pdf files.
+              </p>
+
+              <div role="button" tabindex="0" class="btn btn-upload position-absolute fs">
+                UPLOAD DOCUMENT
+              </div>
+            </label>
+            
+            <input
+              type = "file"
+              name = "upload-job-sample"
+              id="upload-job-sample"
+              class="d-none"
+              required
+            />
+          </div>
+
+          <!-- Job Instructions Upload  -->
+          <div class = "form-group position-relative">
+            <label for="upload-job-instructions" class="d-flex space-between">
+              <span class="text-bold"> Upload Job Instructions * </span>
+              <input
+                type="text"
+                name="upload-area"
+                class="upload-area"
+                id="upload-instructions-area"
+                disabled
+              />
+              <p
+                class="alert-notification danger-color position-absolute fs d-none"
+                id="instruction-notification"  
+              >
+                Please upload either .jpg, .png, .jpeg or .pdf files.
+              </p>
+
+              <div
+                role="button"
+                tabindex="0"
+                class="btn btn-upload position-absolute fs"
+                id="notification-instructions"
+              >
+                UPLOAD DOCUMENT
+              </div>
+            </label>
+
+            <input
+              type = "file"
+              name = "upload-job-instructions"
+              id="upload-job-instructions"
+              class="d-none"
+              required
+            />
+          </div>
+
+          <!-- Job Quantity -->
+          <div class = "form-group">
+            <label for="job-quantity" class="d-flex space-between">
+              <span class="text-bold"> Quantity of the job * </span>
+              <input
+                type = "number"
+                placeholder = "1"
+                name = "job-quantity"
+                id = "job-quantity"
+                required
+              />
+            </label>
+          </div>
+
+          <!-- Input Folder Link -->
+          <div class = "form-group">
+            <label for="input-folder-link" class="d-flex space-between">
+              <span class="text-bold"> Link of the output folder * </span>
+              <input
+                type = "text"
+                placeholder = "(Link)"
+                name = "input-folder-link"
+                id = "input-folder-link"
+                required
+              />
+            </label>
+          </div>
+
+          <!-- Submit Button -->
+          <div class="d-flex space-between">
+            <blockquote>
+              <small class="dim-color fs">* Required Fields</small>
+            </blockquote>
+            <button class="btn btn-default btn-submit" type="submit">
+              Submit
+            </button>
+          </div>
+        </form>
+      </div>
+
+    </div>
+    <script type="text/javascript" src="./js/index.js"></script>
+  </body>
+</html>

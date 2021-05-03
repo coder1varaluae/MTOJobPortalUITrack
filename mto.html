@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" href="%PUBLIC_URL%/habot.ico" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#3B5998" />
+    <meta name="description" content="Habot App" />
+    <script src="https://kit.fontawesome.com/698a14e25d.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="./css/index.css" />
+    <title>Habot.io | Job Platform</title>
+  </head>
+  <body>
+    <noscript>You need to enable JavaScript to run this app.</noscript>
+    <div id="main">
+    
+      <!-- Top Menu -->
+      <header class="main-header">
+        <nav class="navbar d-flex flex-center space-between fs">
+          <div class="logo">
+            <a href="./index.html">
+              <img src="./assets/local/icons/logo-x.png" alt="logo"/>
+            </a>
+          </div>
+          <ul class="position-relative">
+            <a href="./jobs.html"><li class="home">Career Page</li></a>
+            <a href="./mal.html">
+              <li class="mal"> MAL </li>
+            </a>
+            <a href="./mto.html">
+              <li class="mto active-link"> MTO </li>
+            </a>
+            <div class="active-circle-mto" />
+          </ul>
+        </nav>
+
+        <!-- Page Title -->
+        <div class="page-title d-flex flex-center">
+          <div class="main-title"> MTO Job Details Form </div>
+        </div>
+       </header>
+
+      <!-- MTO Job Form -->
+      <div class="container">
+        <form id="mto-form" class="form mx-3" onsubmit="validateMTOForm()">
+          <!-- Microtask Name -->
+          <div class = "form-group">
+            <label for="microtask-name" class="d-flex flex-center space-between">
+              <span class="text-bold"> Name of the Microtask * </span>
+              <input
+                type = "text"
+                placeholder = "(Plain Text)"
+                name = "microtask-name"
+                required
+              />
+            </label>
+          </div>
+
+          <!-- Microtask Category -->
+          <div class = "form-group">
+            <label for="microtask-category" class="d-flex flex-center space-between">
+              <span class="text-bold"> Category of the Microtask * </span>
+              <input
+                type = "text"
+                placeholder = "(Plain Text)"
+                name = "microtask-category"
+                required
+              />
+            </label>
+          </div>
+
+          <!-- Job Cost -->
+          <div class = "form-group">
+            <label for="job-cost" class="d-flex flex-center space-between">
+              <span class="text-bold"> Payment rate per Job($) * </span>
+              <input
+                type = "number"
+                placeholder = "$1"
+                name = "job-cost"
+                required
+              />
+            </label>
+          </div>
+
+            <!-- Time Required By Job -->
+          <div class = "form-group">
+            <label for="time-required" class="d-flex flex-center space-between">
+              <span class="text-bold"> Time Required to do the job * </span>
+              <input
+                type = "text"
+                placeholder = "(Hour Value)"
+                name = "time-required"
+                required
+              />
+            </label>
+          </div>
+
+          <!-- Skills Required -->
+          <div class = "form-group">
+            <label for="skills-required" class="d-flex flex-center space-between">
+              <span class="text-bold"> Skills Required * </span>
+              <textarea
+                name="skills-required"
+                id="skills-required"
+                cols="30"
+                rows="10"
+                placeholder="(Fill Skills)"
+                maxlength="1000"
+                required
+              ></textarea>
+            </label>
+          </div>
+
+          <!-- No People Required -->
+          <div class = "form-group">
+            <label for="people-required" class="d-flex flex-center space-between">
+              <span class="text-bold"> No. of People Required  * </span>
+              <input
+                type = "number"
+                placeholder = "1"
+                name = "people-required"
+                required
+              />
+            </label>
+          </div>
+
+          <!-- Job Sample Upload  -->
+          <div class = "form-group position-relative">
+            <label for="upload-job-sample" class="d-flex space-between">
+              <span class="text-bold"> Upload Job Sample * </span>
+              <input
+                type="text"
+                name="upload-area"
+                class="upload-area"
+                id="upload-sample-area"
+                disabled
+              />
+              <p
+                class="alert-notification danger-color position-absolute fs d-none"
+                id="sample-notification"
+              >
+                Please upload either .jpg, .png, .jpeg or .pdf files.
+              </p>
+
+              <div role="button" tabindex="0" class="btn btn-upload position-absolute fs">
+                UPLOAD DOCUMENT
+              </div>
+            </label>
+            
+            <input
+              type = "file"
+              name = "upload-job-sample"
+              id="upload-job-sample"
+              class="d-none"
+              required
+            />
+          </div>
+
+          <!-- Job Instructions Upload  -->
+          <div class = "form-group position-relative">
+            <label for="upload-job-instructions" class="d-flex space-between">
+              <span class="text-bold"> Upload Job Instructions * </span>
+              <input
+                type="text"
+                name="upload-area"
+                class="upload-area"
+                id="upload-instructions-area"
+                disabled
+              />
+              <p
+                class="alert-notification danger-color position-absolute fs d-none"
+                id="instruction-notification"  
+              >
+                Please upload either .jpg, .png, .jpeg or .pdf files.
+              </p>
+
+              <div
+                role="button"
+                tabindex="0"
+                class="btn btn-upload position-absolute fs"
+                id="notification-instructions"
+              >
+                UPLOAD DOCUMENT
+              </div>
+            </label>
+
+            <input
+              type = "file"
+              name = "upload-job-instructions"
+              id="upload-job-instructions"
+              class="d-none"
+              required
+            />
+          </div>
+
+          <!-- TC Type -->
+          <div class = "form-group">
+            <label for="tc-type" class="d-flex flex-center space-between position-relative">
+              <p class="alert-notification danger-color position-absolute fs d-none" id="tc-type-notification">
+                Please, you must choose a TC Type
+              </p>
+              <span class="text-bold"> Type of TC to be done * </span>
+              <div class="custom-select" style="width:60%;">
+                <select style="width:100%" class="tc-type">
+                  <option value="TC">Select TC</option>
+                  <option value="TC1-AUTOMATED-[A-B]">TC 1 - AUTOMATED - [A-B]</option>
+                  <option value="TC2-MANUAL-[A+B]">TC 2 - MANUAL - [A+B]</option>
+                  <option value="TC3-[A-B-C]">TC 3 - [A-B-C]</option>
+                </select>
+              </div>
+            </label>
+          </div>
+
+          <!-- Submit Button -->
+          <div class="d-flex space-between">
+            <blockquote>
+              <small class="dim-color fs">* Required Fields</small>
+            </blockquote>
+            <button class="btn btn-default btn-submit" type="submit">
+              Submit
+            </button>
+          </div>
+        </form>
+      </div>
+    </div>
+    <script type="text/javascript" src="./js/index.js"></script>
+  </body>
+</html>
