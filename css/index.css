@@ -3,13 +3,13 @@
 
 /* ## General Rules ## */
 :root {
-  --primary-color: #3b5998;
+  --primary-color: #525ded;
   --default-color: #ffa500;
-  --dark-color: #333;
+  --dark-color: #333333;
   --light-color: #ffffff;
-  --smoke-color: #f5f5f5;
-  --dim-color: #929292;
-  --muted-color: #adadad;
+  --muted-color: #f5f5f5;
+  --dim-color: #747474;
+  --smoke-color: #adadad;
   --danger-color: #dc3545;
 }
 
@@ -19,11 +19,51 @@
   padding: 0;
 }
 
+@font-face {
+  font-family: "Lexend Deca Regular";
+  font-style: normal;
+  font-weight: normal;
+  src: local("Lexend Deca Regular"),
+    url("../assets/fonts/Lexand\ Deca/LexendDecaRegular.woff") format("woff");
+}
+
+@font-face {
+  font-family: "Noto Sans Regular";
+  font-style: normal;
+  font-weight: normal;
+  src: local("Noto Sans Regular"),
+    url("../assets/fonts/Noto\ Sans/NotoSans-Regular.woff") format("woff");
+}
+
+@font-face {
+  font-family: "Noto Sans Italic";
+  font-style: normal;
+  font-weight: normal;
+  src: local("Noto Sans Italic"),
+    url("../assets/fonts/Noto\ Sans/NotoSans-Italic.woff") format("woff");
+}
+
+@font-face {
+  font-family: "Noto Sans Bold";
+  font-style: normal;
+  font-weight: normal;
+  src: local("Noto Sans Bold"),
+    url("../assets/fonts/Noto\ Sans/NotoSans-Bold.woff") format("woff");
+}
+
+@font-face {
+  font-family: "Noto Sans Bold Italic";
+  font-style: normal;
+  font-weight: normal;
+  src: local("Noto Sans Bold Italic"),
+    url("../assets/fonts/Noto\ Sans/NotoSans-BoldItalic.woff") format("woff");
+}
+
 body {
-  font-family: "Roboto", "Raleway", sans-serif;
-  font-size: 1rem;
+  font-family: "Noto Sans Regular", "Roboto", sans-serif;
+  font-size: 14px;
   line-height: 1.6;
-  background-color: var(--smoke-color);
+  background-color: var(--muted-color);
   color: var(--dark-color);
 }
 
@@ -130,6 +170,22 @@ textarea {
 
 .fs-3x {
   font-size: 3rem;
+}
+
+.ff-Noto-Regular {
+  font-family: "Noto Sans Regular";
+}
+
+.ff-Noto-bold {
+  font-family: "Noto Sans Bold";
+}
+
+.ff-Noto-italic {
+  font-family: "Noto Sans Italic";
+}
+
+.ff-Noto-bold-italic {
+  font-family: "Noto Sans Bold Italic";
 }
 
 /* Display */
@@ -253,8 +309,25 @@ textarea {
 .mx-3 {
   margin: 3rem 0 0 0;
 }
+
+.mx-4 {
+  margin: 4rem 0 0 0;
+}
+
 .mx-5 {
   margin: 5rem 0 0 0;
+}
+
+.mx-6 {
+  margin: 6rem 0 0 0;
+}
+
+.mx-7 {
+  margin: 7rem 0 0 0;
+}
+
+.mx-8 {
+  margin: 8rem 0 0 0;
 }
 
 .my-x {
@@ -281,7 +354,8 @@ textarea {
 .btn {
   display: block;
   padding: 0.6rem 1.3rem;
-  font-size: 0.8rem;
+  font-size: 22px;
+  font-family: "Lexend Deca Regular";
   cursor: pointer;
   margin-right: 0.5rem;
   transition: opacity 0.2s ease-in;
@@ -302,14 +376,16 @@ textarea {
 .btn-search {
   top: 0.45rem;
   right: 0;
-  border-radius: 16px;
+  font-size: 12px;
+  border-radius: 18px;
   color: var(--light-color);
-  background-color: var(--default-color);
+  background-color: var(--primary-color);
 }
 
 .btn-view {
   top: 0.3rem;
   right: 0;
+  font-size: 12px;
   border-radius: 10px;
   color: var(--light-color);
   background-color: var(--dim-color);
@@ -318,10 +394,10 @@ textarea {
 .btn-upload {
   top: 0.4rem;
   right: 0;
+  font-size: 12px;
   padding: 0.3rem 1rem;
   color: var(--light-color);
   border-radius: 3px;
-  background-color: var(--default-color);
 }
 
 .btn-explore {
@@ -337,7 +413,7 @@ textarea {
   margin: 2rem 0 0 0;
   border-radius: 4px;
   padding: 0.7rem 2rem;
-  font-weight: bold;
+  font-size: 24px;
 }
 
 /* Forms */
@@ -369,8 +445,8 @@ div .form-group input {
   display: block;
   width: 60%;
   padding: 0.8rem 1rem;
-  font-size: 0.9rem;
-  border: 1px solid var(--smoke-color);
+  font-size: 12px;
+  border: 1px solid var(--muted-color);
   border-radius: 6px;
   outline: none;
 }
@@ -393,10 +469,12 @@ div .form-group input {
 .navbar {
   position: fixed;
   top: 0;
+  font-size: 16px;
   width: 100%;
   padding: 1rem 3rem 0.5rem 3rem;
   margin: 0;
   background-color: var(--light-color);
+  font-family: "Lexend Deca Regular";
   opacity: 1;
   z-index: 1;
 }
@@ -427,8 +505,8 @@ div .form-group input {
   position: absolute;
   width: 5px;
   height: 5px;
-  top: 0.95rem;
-  right: 3.9rem;
+  top: 1.15rem;
+  right: 4.9rem;
   border-radius: 100%;
   background-color: var(--primary-color);
 }
@@ -437,8 +515,8 @@ div .form-group input {
   position: absolute;
   width: 5px;
   height: 5px;
-  top: 0.95rem;
-  right: 15.7rem;
+  top: 1.15rem;
+  right: 19.5rem;
   border-radius: 100%;
   background-color: var(--primary-color);
 }
@@ -475,30 +553,31 @@ div .form-group input {
 }
 
 .watch-p {
-  width: 175px;
+  width: 225px;
   margin: 0.5rem 0 2.5rem 0.3rem;
   font-weight: bold;
-  font-size: 1.3rem;
+  font-size: 24px;
   line-height: 1.2em;
+  font-family: "Noto Sans Bold";
 }
 
 .read-more-link {
   justify-content: unset;
-  width: 425px;
+  width: 350px;
 }
 .read-more-policy {
   justify-content: unset;
-  width: 205px;
+  width: 165px;
   margin: 0 0 0 25rem;
 }
 .learn-more-story {
   justify-content: unset;
-  width: 205px;
+  width: 165px;
   margin: 0 0 0 20rem;
 }
 .discover-more-values {
   justify-content: unset;
-  width: 290px;
+  width: 235px;
   margin: 0 0 0 18rem;
 }
 
@@ -506,15 +585,17 @@ div .form-group input {
 .read-more-policy a,
 .learn-more-story a,
 .discover-more-values a {
+  font-size: 14px;
   text-decoration: underline;
-  flex: 3.8;
+  flex: 3.3;
 }
 
 .read-more-link img,
 .read-more-policy img,
 .learn-more-story img,
 .discover-more-values img {
-  flex: 0.2;
+  flex: 0;
+  margin-top: 0.2rem;
 }
 
 /* Main Sections:: Job Platform */
@@ -625,7 +706,7 @@ div .search {
   padding: 1rem;
   font-size: 0.9rem;
   border-radius: 30px;
-  border: 1px solid var(--smoke-color);
+  border: 1px solid var(--muted-color);
   outline: none;
 }
 
@@ -652,8 +733,8 @@ div .job {
   position: absolute;
   width: 5px;
   height: 5px;
-  top: 0.95rem;
-  right: 6rem;
+  top: 1.15rem;
+  right: 6.9rem;
   border-radius: 100%;
   background-color: var(--primary-color);
 }
@@ -662,8 +743,8 @@ div .job {
   position: absolute;
   width: 5px;
   height: 5px;
-  top: 0.95rem;
-  right: 2.9rem;
+  top: 1.15rem;
+  right: 3.3rem;
   border-radius: 100%;
   background-color: var(--primary-color);
 }
@@ -714,7 +795,7 @@ div .job {
 /* Right Handise */
 .more-info {
   width: 425px;
-  height: 385px;
+  height: 365px;
   margin: 3.75rem 0 0 0;
   padding: 1rem;
   background: var(--light-color);
@@ -741,7 +822,7 @@ div .job {
 .skills {
   width: 425px;
   margin: 1.5rem 0 0 0;
-  padding: 1rem;
+  padding: 1rem 1rem 2rem 1rem;
   background: var(--light-color);
 }
 
@@ -751,14 +832,13 @@ div .job {
   margin: 1.5rem 0 0 0;
   border-radius: 4px;
   font-size: 1.2rem;
-  background: var(--default-color);
 }
 
 /* Footer */
 .footer {
   width: 100%;
   margin: 5rem 0 0 0;
-  font-size: 0.8em;
+  font-size: 14px;
   color: var(--dim-color);
 }
 
@@ -773,13 +853,19 @@ div .job {
   background: url(../assets/local/illustrations/Rectangle-10.svg);
   padding: 0 7rem;
   height: 275px;
-  border: 1px solid var(--smoke-color);
+  border: 1px solid var(--muted-color);
 }
 
 .policies,
 .about,
 .address {
   flex: 1;
+  font-style: normal;
+}
+.policies a,
+.about a,
+.address a {
+  color: var(--dim-color);
 }
 
 .subscribe {
@@ -795,12 +881,12 @@ div .job {
 }
 .subscribe .input input {
   padding: 0.8rem 1rem;
-  font-size: 0.9rem;
-  border: 1px solid var(--smoke-color);
+  font-size: 12px;
+  border: 1px solid var(--muted-color);
   border-radius: 6px;
   outline: none;
   width: 175px;
-  background: var(--smoke-color);
+  background: var(--muted-color);
 }
 
 /* Pagination */
